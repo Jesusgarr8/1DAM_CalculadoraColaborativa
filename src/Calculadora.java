@@ -15,7 +15,11 @@ public class Calculadora {
     }
 
     public static int dividir(int a, int b) {
-        return a / b;   // Versión inicial sin control de errores
+        if (b == 0) {
+            System.out.println("Error: División por cero.");
+            return 0; 
+        }
+        return a / b;
     }
 
     public int potencia(int base, int exponente) {
