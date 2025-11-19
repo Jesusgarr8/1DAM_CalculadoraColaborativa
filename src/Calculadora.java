@@ -18,6 +18,11 @@ public class Calculadora {
         return a / b;   // Versión inicial sin control de errores
     }
 
+    public int potencia(int base, int exponente) {
+        return (int) Math.pow(base, exponente);
+    }
+
+
     public static void main(String[] args) {
         System.out.println("Iniciando calculadora...");
 
@@ -58,9 +63,17 @@ public class Calculadora {
             System.out.println("División: " + dividir(num3, num4));
         }
 
+        System.out.println("Potencia");
+        Calculadora calc = new Calculadora();
+        System.out.print("Introduce la base: ");
+        int base = sc.nextInt();
 
+        System.out.print("Introduce el exponente: ");
+        int exponente = sc.nextInt();
+
+        int resultado = calc.potencia(base, exponente);
+        System.out.println("Resultado: " + resultado);
     }
-
 
 
 }
